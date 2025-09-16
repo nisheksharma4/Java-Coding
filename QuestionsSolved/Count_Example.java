@@ -1,6 +1,7 @@
 package QuestionsSolved;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class Count_Example {
@@ -19,5 +20,8 @@ public class Count_Example {
 
         //Max
         List<Integer> num = Arrays.asList(200,700,850,600,750);
+
+        int maxVal = num.stream().max(Comparator.naturalOrder()).get();
+        System.out.println("Maximum from num list : "+ maxVal);
     }
 }
